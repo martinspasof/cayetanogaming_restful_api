@@ -1,0 +1,13 @@
+RewriteEngine On
+#RewriteRule ^([^/]*)/([^/]*)$ index.php?url=$1&username=$2 [L]
+#RewriteRule ^([^/]+)/? index.php?url=$1 [L,QSA]
+
+RewriteRule ^([a-z0-9\-]+)/?([a-z0-9\-]+)?/?$ index.php?jobs=$1&list=$2 [nc,qsa]
+RewriteRule ^([a-z0-9\-]+)/?([a-z0-9\-]+)?/?$ index.php?jobs=$1&id=$2 [nc,qsa]
+RewriteRule ^([a-z0-9\-]+)/?([a-z0-9\-]+)?/?$ index.php?candidates=$1&list=$2 [nc,qsa]
+RewriteRule ^([a-z0-9\-]+)/?([a-z0-9\-]+)?/?([a-z0-9\-]+)?/?$ index.php?candidates=$1&review=$2&id=$3 [nc,qsa]
+RewriteRule ^([a-z0-9\-]+)/?([a-z0-9\-]+)?/?([a-z0-9\-]+)?/?$ index.php?candidates=$1&search=$2&id=$3 [nc,qsa]
+
+
+
+
